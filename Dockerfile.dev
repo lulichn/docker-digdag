@@ -1,0 +1,14 @@
+
+FROM openjdk:8-jre-alpine
+
+MAINTAINER lulichn <daisuke.develop@gmail.com>
+
+
+RUN mkdir /opt
+COPY digdag-dev.jar /opt/digdag
+
+WORKDIR /root
+
+ENTRYPOINT ["java", "-jar", "/opt/digdag"]
+CMD ["--help"]
+
