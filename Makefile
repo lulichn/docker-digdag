@@ -1,9 +1,18 @@
+DEV =
 IMAGE_NAME = lulichn/digdag
-IMAGE_TAG = 0.9.14-dev
+VERSION = 0.9.13
 IMAGE = $(IMAGE_NAME):$(IMAGE_TAG)
 
+ifdef DEV
+	DOCKER_FILE = Dockerfile.dev
+	IMAGE_TAG = ${DEV}-docker-dev
+else
+	DOCKER_FILE = Dockerfile.docker
+	IMAGE_TAG = ${VERSION}-docker
+endif
+
 build:
-	docker build -t $(IMAGE) -f Dockerfile.dev .
+	docker build -t $(IMAGE) -f $(DOCKER_FILE) .
 	@echo Built $(IMAGE)
 
 push:

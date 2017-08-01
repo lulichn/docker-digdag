@@ -10,6 +10,8 @@ RUN \
         curl -L https://dl.bintray.com/digdag/maven/digdag-$DIGDAG_VERSION.jar --create-dirs -o /opt/digdag && \
         apk del deps
 
+COPY server.properties /etc/digdag/server.properties
+
 WORKDIR /root
 
 ENTRYPOINT ["java", "-jar", "/opt/digdag"]
