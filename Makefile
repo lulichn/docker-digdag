@@ -1,6 +1,6 @@
 DEV =
 IMAGE_NAME = lulichn/digdag
-VERSION = 0.9.13
+VERSION = 0.9.14
 IMAGE = $(IMAGE_NAME):$(IMAGE_TAG)
 
 ifdef DEV
