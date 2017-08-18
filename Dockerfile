@@ -3,7 +3,7 @@ FROM openjdk:8-jre-alpine
 
 MAINTAINER lulichn <daisuke.develop@gmail.com>
 
-ENV DIGDAG_VERSION 0.9.14
+ENV DIGDAG_VERSION 0.9.15
 
 RUN \
         apk --no-cache add --virtual deps curl && \

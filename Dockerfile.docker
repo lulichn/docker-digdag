@@ -5,7 +5,7 @@ MAINTAINER lulichn <daisuke.develop@gmail.com>
 
 ENV DOCKER_CHANNEL stable
 ENV DOCKER_VERSION 17.06.0-ce
-ENV DIGDAG_VERSION 0.9.14
+ENV DIGDAG_VERSION 0.9.15
 
 RUN apk add --no-cache \
 		ca-certificates
